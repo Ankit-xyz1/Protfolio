@@ -1,15 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import Sidebar from "@/components/sidebar/Sidebar";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -19,10 +9,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <head>
+        <script src="https://kit.fontawesome.com/204fd8c520.js" crossorigin="anonymous"></script>
+      </head>
+      <body>
+        <div className="Home  w-full min-h-screen bg-zinc-900 flex flex-row">
+          <div className="sidespace md:w-[10%] ">
+          </div>
+          <div className="sidebar h-[100vh] md:w-[10%] flex justify-center items-center">
+            <Sidebar />
+          </div>
+          <div className="rightSide flex items-center w-100% md:w-[78%]">
+            <div className="overflow-auto scrollbar-hide  h-[90vh] w-[90%] p-4">
+              {children}
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
