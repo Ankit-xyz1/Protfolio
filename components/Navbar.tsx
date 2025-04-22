@@ -2,6 +2,9 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { LinkedinIcon } from "./ui/linkedin";
+import { TwitterIcon } from "./ui/twitter";
+import { GithubIcon } from "./ui/github";
 
 const Navbar = () => {
     return (
@@ -23,9 +26,9 @@ const Navbar = () => {
                     </p>
                 </div>
             </div>
-            <div className="w-[40%] flex items-center justify-end gap-2 md:gap-4 px-2">
-                <div className="hidden md:inline"><Twitter className="cursor-pointer" /></div>
-                <div className="flex md:gap-4 gap-2"><Linkedin className="cursor-pointer" /><Github className="cursor-pointer" /></div>
+            <div className="w-[40%] flex items-center justify-end gap-2 md:gap-1 px-2">
+                <div className="hidden md:inline"><TwitterIcon/></div>
+                <div className="flex md:gap-1 gap-1"><LinkedinIcon className="bg-zinc-950"/><GithubIcon/></div>
             </div>
         </div>
     );

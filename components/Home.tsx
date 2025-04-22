@@ -9,18 +9,19 @@ const Home = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
-      <div className="tagLine text-lg md:text-2xl jet text-zinc-300"><span className='font-semibold text-zinc-100'>I’m Ankit</span> — a <span className='font-semibold text-zinc-100'>Full-Stack Dev</span>  from Mumbai who loves crafting smooth, end-to-end digital experiences.
+      <div className="tagLine text-lg md:text-2xl jet text-zinc-300"><span className='font-semibold text-zinc-100'>I’m Ankit</span> — a 
+      <span className='font-semibold text-zinc-100'> Full-Stack Dev</span>  from Mumbai who loves crafting smooth, end-to-end digital experiences.
       </div>
       <div className="para text-sm md:text-xl mt-5">
         <div className="heading jet mb-5 text-white">Experience-</div>
-        <div className='h-[10vh] bg-zinc-900 rounded p-1 flex items-center justify-center text-white jet'>
-        <TypewriterEffectSmooth words={[{text:"Looking",className:"text-xl text-white"},{text:"for",className:"text-xl text-white"},{text:"it",className:"text-xl text-white"}]} />
+        <div className='h-[10vh] bg-zinc-900 border-2 border-zinc-800 rounded p-1 flex items-center justify-center text-white jet'>
+          <TypewriterEffectSmooth words={[{ text: "Looking", className: "text-xl text-white" }, { text: "for", className: "text-xl text-white" }, { text: "it", className: "text-xl text-white" }]} />
         </div>
       </div>
       <div className="para text-sm md:text-xl mt-5 flex gap-2 flex-col" >
         <div className="heading jet mb-5 text-white">Skills</div>
-        <div className='h-fit bg-zinc-900 rounded p-3 flex gap-2 flex-col md:flex-row text-white'>
-          <div className='p-1 border-2 w-fit border-zinc-800 rounded jet'>Frontend</div>
+        <div className='h-fit bg-zinc-900 border-2 border-zinc-800 rounded p-3 flex gap-2 flex-col md:flex-row text-white'>
+          <div className=' border-2 w-fit flex items-center justify-center border-zinc-800  bg-zinc-950 p-2 rounded jet'>Frontend</div>
           <motion.div className="techs flex gap-2 items-center flex-wrap"
             initial={{ opacity: 0, x: -120 }}
             animate={{ opacity: 1, x: 0 }}
@@ -38,9 +39,9 @@ const Home = () => {
 
           </motion.div>
         </div>
-        <motion.div className='h-fit bg-zinc-900 rounded p-3 flex gap-2 flex-col md:flex-row text-white'
+        <motion.div className='h-fit bg-zinc-900 border-2 border-zinc-800 rounded p-3 flex gap-2 flex-col md:flex-row text-white'
         >
-          <div className='p-1 border-2 w-fit border-zinc-800 rounded jet'>Backend</div>
+          <div className=' border-2 w-fit flex items-center justify-center border-zinc-800 bg-zinc-950 p-2 rounded jet'>Backend</div>
           <motion.div className="techs flex gap-2 items-center"
             initial={{ opacity: 0, x: -120 }}
             animate={{ opacity: 1, x: 0 }}
@@ -51,8 +52,8 @@ const Home = () => {
             <Image alt='typeScript' width={30} height={20} src={'typescript.svg'}></Image>
           </motion.div>
         </motion.div>
-        <div className='h-fit bg-zinc-900 rounded p-3 flex gap-2 flex-col md:flex-row text-white'>
-          <div className='p-1 border-2 w-fit border-zinc-800 rounded jet'>Database</div>
+        <div className='h-fit bg-zinc-900 border-2 border-zinc-800 rounded p-3 flex gap-2 flex-col md:flex-row text-white'>
+          <div className=' bg-zinc-950 p-2 border-2 w-fit flex items-center justify-center border-zinc-800 rounded jet'>Database</div>
           <motion.div className="techs flex gap-2 items-center"
             initial={{ opacity: 0, x: -120 }}
             animate={{ opacity: 1, x: 0 }}
@@ -61,8 +62,8 @@ const Home = () => {
             <Image alt='pp' width={30} height={20} src={'redis.svg'}></Image>
           </motion.div>
         </div>
-        <div className='h-fit bg-zinc-900 rounded p-3 flex gap-2 flex-col md:flex-row text-white'>
-          <div className='p-1 border-2 w-fit border-zinc-800 rounded jet'>Tools</div>
+        <div className='h-fit bg-zinc-900 border-2 border-zinc-800 rounded p-3 flex gap-2 flex-col md:flex-row text-white'>
+          <div className=' bg-zinc-950 p-2 border-2 w-fit border-zinc-800 rounded jet'>Tools</div>
           <motion.div className="techs flex gap-2 items-center flex-wrap"
             initial={{ opacity: 0, x: -120 }}
             animate={{ opacity: 1, x: 0 }}
@@ -78,8 +79,8 @@ const Home = () => {
             <Image alt='replit' width={30} height={20} src={'replit.svg'}></Image>
           </motion.div>
         </div>
-        <div className='h-fit bg-zinc-900 rounded p-3 flex gap-2 flex-col md:flex-row text-white'>
-          <div className='p-1 border-2 w-fit border-zinc-800 rounded jet'>Web3</div>
+        <div className='h-fit bg-zinc-900 border-2 border-zinc-800 rounded p-3 flex gap-2 flex-col md:flex-row text-white'>
+          <div className=' bg-zinc-950 p-2 border-2 w-fit flex items-center justify-center border-zinc-800 rounded jet'>Web3</div>
           <motion.div className="techs flex gap-2 items-center"
             initial={{ opacity: 0, x: -120 }}
             animate={{ opacity: 1, x: 0 }}
