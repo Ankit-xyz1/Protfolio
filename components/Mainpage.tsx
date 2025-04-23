@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './Navbar'
 import Home from './Home'
 import Projects from './Projects'
@@ -36,7 +36,7 @@ const Mainpage = () => {
                     {tabs.map((tab, idx) => (
                         <div
                             key={tab}
-                            onMouseEnter={() => {setHoveredIndex(idx)}}
+                            onMouseEnter={() => { setHoveredIndex(idx) }}
                             onMouseLeave={() => setHoveredIndex(null)}
                             className='relative px-1 h-[55%]'
                         >
@@ -57,12 +57,23 @@ const Mainpage = () => {
                     ))}
                 </div>
             </div>
-            <Navbar/>
-            <div className="content p-2 text-xl">
-               {CurrentTab==="Home" && <Home/>}
-               {CurrentTab==="Projects" && <Projects/>}
-               {CurrentTab==="About" && <About />}
-            </div>
+            <Navbar />
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={CurrentTab}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 20 }}
+                    transition={{ duration: 0.5 }}
+                    className="content p-2 text-xl"
+                >
+                <div className="content p-2 text-xl">
+                    {CurrentTab === "Home" && <Home />}
+                    {CurrentTab === "Projects" && <Projects />}
+                    {CurrentTab === "About" && <About />}
+                </div>
+                </motion.div>
+                </AnimatePresence>
         </div>
     )
 }

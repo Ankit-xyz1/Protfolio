@@ -6,9 +6,9 @@ import { TypewriterEffect, TypewriterEffectSmooth } from './ui/typewriter-effect
 const Home = () => {
   return (
     <motion.div className='w-full h-fit'
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}>
+    initial={{ opacity: 0, x: -120 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="tagLine text-lg md:text-2xl jet text-zinc-300"><span className='font-semibold text-zinc-100'>I’m Ankit</span> — a 
       <span className='font-semibold text-zinc-100'> Full-Stack Dev</span>  from Mumbai who loves crafting smooth, end-to-end digital experiences.
       </div>
