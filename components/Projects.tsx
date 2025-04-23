@@ -49,7 +49,7 @@ const Projects = () => {
                             </div>
                             <div className="tech-stack w-[50%] h-full items-center justify-end flex gap-1 p-1">
                                 {item.techStack?.map((tech, index) => (
-                                    <Image alt="techStack" src={tech} width={20} height={20}></Image>
+                                    <Image key={index} alt="techStack" src={tech} width={20} height={20}></Image>
                                 ))}
                             </div>
                         </div>

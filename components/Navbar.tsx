@@ -5,6 +5,7 @@ import React from "react";
 import { LinkedinIcon } from "./ui/linkedin";
 import { TwitterIcon } from "./ui/twitter";
 import { GithubIcon } from "./ui/github";
+import { LinkPreview } from "./ui/link-preview";
 
 const Navbar = () => {
     return (
@@ -27,8 +28,16 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="w-[40%] flex items-center justify-end gap-2 md:gap-1 px-2">
-                <div className="hidden md:inline"><TwitterIcon/></div>
-                <div className="flex md:gap-1 gap-1"><LinkedinIcon className="bg-zinc-950"/><GithubIcon/></div>
+                <div className="hidden md:inline">
+                    <a href="https://x.com/0xanki7" target="_blank"><TwitterIcon /></a>
+                </div>
+                <div className="flex md:gap-1 gap-1">
+                    <a href="https://www.linkedin.com/in/ankit-gupta-3067302b4/" target="_blank"><LinkedinIcon className="bg-zinc-950" /></a>
+                    <LinkPreview url={`https://github.com/Ankit-xyz1`} className="text-white" >
+                        <a href="https://github.com/Ankit-xyz1" target="_blank"><GithubIcon /></a>
+                    </LinkPreview>
+
+                </div>
             </div>
         </div>
     );
