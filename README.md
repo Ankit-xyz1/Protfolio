@@ -1,4 +1,4 @@
-Here you go! Here's the full `README.md` content, ready to copy and paste into your project:
+
 
 
 # Ankit S Gupta – Portfolio
