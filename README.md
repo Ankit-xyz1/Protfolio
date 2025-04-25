@@ -65,8 +65,7 @@ Protfolio/
 - SEO-friendly structure
 - Project showcase section
 - About & Skills
-- Contact section *(optional backend or third-party form service)*
-- Smooth animations with Framer Motion *(if used)*
+- Smooth animations with Framer Motion
 - Deployed on Vercel
 
 ---
@@ -84,4 +83,3 @@ This project is under the [MIT License](LICENSE).
 [📬 LinkedIn](https://www.linkedin.com/in/ankit-s-gupta/)
 ```
 
-Would you like this as a downloadable `.md` file too?
