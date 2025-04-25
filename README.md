@@ -19,9 +19,9 @@
 
 - **Framework:** [Next.js 13+](https://nextjs.org/)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** Tailwind CSS / CSS Modules *(update as per your code)*
+- **Styling:** Tailwind CSS / Acternity UI
 - **Deployment:** [Vercel](https://vercel.com/)
-- **Icons & Fonts:** React Icons, Google Fonts
+- **Icons & Fonts:** Animated Icons, Google Fonts
 
 ---
 
