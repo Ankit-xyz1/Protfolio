@@ -1,6 +1,6 @@
 Here you go! Here's the full `README.md` content, ready to copy and paste into your project:
 
-```markdown
+
 # Ankit S Gupta – Portfolio
 
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.ankit.club)
