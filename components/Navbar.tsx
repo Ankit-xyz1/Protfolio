@@ -9,7 +9,7 @@ import { LinkPreview } from "./ui/link-preview";
 
 const Navbar = () => {
     return (
-        <div className="h-[10vh] w-full rounded-xl flex items-center text-yellow-50  bg-zinc-950 border-2 border-zinc-900 z-10">
+        <div className="h-[10vh] w-full rounded-xl flex items-center text-yellow-50  bg-zinc-950 border-2 border-zinc-900 z-10000">
             <div className="w-[60%] flex items-center justify-start gap-5">
                 <span className="ml-2">
                     <Image
@@ -33,10 +33,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex md:gap-1 gap-1">
                     <a href="https://www.linkedin.com/in/ankit-gupta-3067302b4/" target="_blank"><LinkedinIcon className="bg-zinc-950" /></a>
-                    <LinkPreview url={`https://github.com/Ankit-xyz1`} className="text-white" >
-                        <a href="https://github.com/Ankit-xyz1" target="_blank"><GithubIcon /></a>
-                    </LinkPreview>
-
+                    <a href="https://github.com/Ankit-xyz1" target="_blank"><GithubIcon /></a>
                 </div>
             </div>
         </div>
