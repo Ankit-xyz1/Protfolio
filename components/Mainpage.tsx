@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, easeInOut, motion } from 'framer-motion'
 import Navbar from './Navbar'
 import Home from './Home'
 import Projects from './Projects'
@@ -61,19 +61,27 @@ const Mainpage = () => {
             <AnimatePresence mode="wait">
                 <motion.div
                     key={CurrentTab}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }}
-                    transition={{ duration: 0.25 }}
+                    initial={{
+                        opacity: 0,
+                        scale: 0.9,
+                        filter: 'blur(10px)'
+                    }}
+                    animate={{
+                        opacity: 1,
+                        scale:1,
+                        filter: 'blur(0px)'
+                    }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    exit={{ opacity: 0, scale: 0.98, filter: 'blur(10px)' }}
                     className="content p-2 text-xl"
                 >
-                <div className="content p-2 text-xl">
-                    {CurrentTab === "Home" && <Home />}
-                    {CurrentTab === "Projects" && <Projects />}
-                    {CurrentTab === "About" && <About />}
-                </div>
+                    <div className="content p-2 text-xl">
+                        {CurrentTab === "Home" && <Home />}
+                        {CurrentTab === "Projects" && <Projects />}
+                        {CurrentTab === "About" && <About />}
+                    </div>
                 </motion.div>
-                </AnimatePresence>
+            </AnimatePresence>
         </div>
     )
 }

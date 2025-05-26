@@ -26,10 +26,7 @@ const Projects = () => {
     return (
         <div className="flex gap-2  flex-col">
             {projectList.map((item: projectstype, index: number) => (
-                <motion.div key={index} className="min-h-[20vh] max-h-fit w-full rounded-xl flex flex-col text-yellow-50  bg-zinc-950 border-2 border-zinc-900  p-1"
-                    initial={{ opacity: 0, x: -120 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}>
+                <motion.div key={index} className="min-h-[20vh] max-h-fit w-full rounded-xl flex flex-col text-yellow-50  bg-zinc-950 border-2 border-zinc-900  p-1">
                     <div className="heading  w-full h-fit p-2 flex justify-between">
                         <p className="text-xl md:text-2xl jet text-white">
                             <LinkPreview url={item.LiveLink} className="text-white" >
