@@ -1,14 +1,26 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AnimatePresence, easeInOut, motion } from 'framer-motion'
 import Navbar from './Navbar'
 import Home from './Home'
 import Projects from './Projects'
 import About from './About'
+import Lenis from 'lenis'
 
 const tabs = ["Home", "Projects", "About"]
 
+
+
 const Mainpage = () => {
+    useEffect(() => {
+        const lenis = new Lenis()
+        function raf(time: any) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+    }, [])
+
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
     const [CurrentTab, setCurrentTab] = useState<string>("Home")
     const changeTab = (x: number) => {
@@ -68,7 +80,7 @@ const Mainpage = () => {
                     }}
                     animate={{
                         opacity: 1,
-                        scale:1,
+                        scale: 1,
                         filter: 'blur(0px)'
                     }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
