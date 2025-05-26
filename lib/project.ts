@@ -13,7 +13,7 @@ export const projectArray: projectstype[] = [
         active: true,
         description: "An LLM-powered web application that deeply analyzes any public GitHub repository. It helps developers and newcomers understand project structure, tech stack, and code insights using AI-generated summaries.",
         githubLink: "https://github.com/Ankit-xyz1/githubanalyzer",
-        LiveLink: "https://githubanalyzer-eight.vercel.app/",
+        LiveLink: "https://git-analyzer.ankit.club/",
         techStack: ["nextjs.svg", "react_dark.svg", "typescript.svg", "tailwindcss.svg", "shadcn.svg"]
     },
     {
@@ -21,7 +21,7 @@ export const projectArray: projectstype[] = [
         active: true,
         description: "A progressive web app (PWA) that allows users to generate Solana blockchain wallets, manage balances, and send transactions. Fully client-side and secure, tailored for fast Solana-based interaction.",
         githubLink: "https://github.com/Ankit-xyz1/crypto/tree/main/webbasedwalletnext",
-        LiveLink: "https://crypto-two-roan.vercel.app/",
+        LiveLink: "https://sol-wallet.ankit.club/",
         techStack: ["nextjs.svg", "react_dark.svg", "typescript.svg", "tailwindcss.svg", "shadcn.svg"]
     },
     {
@@ -29,7 +29,7 @@ export const projectArray: projectstype[] = [
         active: true,
         description: "A privacy-focused URL shortener that allows users to generate and share short links without any login or account. Built for speed, simplicity, and zero data retention.",
         githubLink: "https://github.com/Ankit-xyz1/delink",
-        LiveLink: "https://delink-rho.vercel.app/",
+        LiveLink: "https://delink.ankit.club/",
         techStack: ["react_dark.svg", "javascript.svg", "mongodb.svg", "tailwindcss.svg"]
     },
     {
