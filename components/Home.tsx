@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 import { TypewriterEffect, TypewriterEffectSmooth } from './ui/typewriter-effect'
+import { experience } from '@/lib/project'
 
 const Home = () => {
   return (
@@ -21,9 +22,26 @@ const Home = () => {
       </div>
       <div className="para text-sm md:text-xl mt-5">
         <div className="heading jet mb-5 text-white">Experience-</div>
-        <div className='h-[10vh] bg-zinc-900 border-2 border-zinc-800 rounded p-1 flex items-center justify-center text-white jet'>
-          <TypewriterEffectSmooth words={[{ text: "Looking", className: "text-xl text-white" }, { text: "for", className: "text-xl text-white" }, { text: "it", className: "text-xl text-white" }]} />
+        <div className="min-h-[10vh] h-fit bg-zinc-900 border-2 border-zinc-800 rounded p-4 flex items-center text-white jet overflow-x-auto space-x-6">
+          {experience.map((item, index) => (
+            <div key={index} className="min-w-max px-4 py-2 border border-zinc-800 rounded-lg bg-zinc-800 shadow-md">
+              <h3 className="text-lg font-semibold">{item.name}</h3>
+              <p className="text-sm text-zinc-300">{item.role}</p>
+              <p className="text-xs text-zinc-400">
+                {item.startDate} - {item.endDate} ({item.Durration})
+              </p>
+              <a
+                href={`https://${item.link}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-blue-400 hover:underline"
+              >
+                {item.link}
+              </a>
+            </div>
+          ))}
         </div>
+
       </div>
       <div className="para text-sm md:text-xl mt-5 flex gap-2 flex-col" >
         <div className="heading jet mb-5 text-white">Skills</div>

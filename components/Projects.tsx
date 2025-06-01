@@ -22,7 +22,10 @@ const Projects = () => {
         setprojectList(projectArray)
     }, [])
 
-
+    function removeAfterDot(filename: string): string {
+        const index = filename.indexOf('.');
+        return index !== -1 ? filename.slice(0, index) : filename;
+    }
     return (
         <div className="flex gap-2  flex-col">
             {projectList.map((item: projectstype, index: number) => (
@@ -44,10 +47,25 @@ const Projects = () => {
                                 <a href={item.githubLink} target="_blank"><GithubIcon className="" size={25} /></a>
                                 <a href={item.LiveLink} target="_blank"><LinkIcon className="" size={25} /></a>
                             </div>
-                            <div className="tech-stack w-[50%] h-full items-center justify-end flex gap-1 p-1">
-                                {item.techStack?.map((tech, index) => (
-                                    <Image key={index} alt="techStack" src={tech} width={20} height={20}></Image>
-                                ))}
+                            <div className="tech-stack w-[50%] h-full items-center justify-end flex relative">
+                                <div className="border-zinc-800 border items-center justify-end flex p-2 rounded-md gap-0.5">
+                                    {item.techStack?.map((tech, index) => (
+                                        <motion.div
+                                            key={index}
+                                            whileHover="animate"
+                                            whileTap="animate"
+                                            initial="initial"
+                                            className="flex items-center text-xs justify-start gap-1 cursor-pointer ">
+                                            <Image alt="techStack" src={tech} width={20} height={20}></Image>
+                                            <motion.span
+                                                variants={{ initial: { width: 0 }, animate: { width: "auto" }, exit: { width: 0 } }}
+                                                transition={{ type: "spring", stiffness: 200, damping: 25, mass: 0.5 }}
+                                                className="overflow-hidden whitespace-nowrap text-zinc-400 flex items-center justify-center h-full w-fit">
+                                                {removeAfterDot(tech)}
+                                            </motion.span>
+                                        </motion.div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
