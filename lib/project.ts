@@ -9,18 +9,28 @@ interface projectstype {
 
 export const projectArray: projectstype[] = [
   {
-    name: "GitHub Analyzer",
+    name: "jsGit (a mini version control system)",
     active: true,
     description:
-      "An LLM-powered web application that deeply analyzes any public GitHub repository. It helps developers and newcomers understand project structure, tech stack, and code insights using AI-generated summaries.",
-    githubLink: "https://github.com/Ankit-xyz1/githubanalyzer",
-    LiveLink: "https://git-analyzer.ankit.club/",
+      "A lightweight version control system inspired by Git, built from scratch in Node.js. It creates its own .jsGit folder, tracks files, generates unique commit hashes, and supports committing directly from the terminal.",
+    githubLink:
+      "https://github.com/Ankit-xyz1/versionControlSystem",
+    LiveLink: "https://github.com/Ankit-xyz1/versionControlSystem",
     techStack: [
-      "nextjs.svg",
-      "reactJS.svg",
       "typescript.svg",
-      "tailwindcss.svg",
-      "shadcn.svg",
+      "javascript.svg"
+    ],
+  },
+  {
+    name: "Uptimed (a mini version control system)",
+    active: false,
+    description:
+      "coming soon",
+    githubLink:
+      "https://github.com/Ankit-xyz1/versionControlSystem",
+    LiveLink: "https://github.com/Ankit-xyz1/versionControlSystem",
+    techStack: [
+      "typescript.svg",
     ],
   },
   {
@@ -31,6 +41,21 @@ export const projectArray: projectstype[] = [
     githubLink:
       "https://github.com/Ankit-xyz1/crypto/tree/main/webbasedwalletnext",
     LiveLink: "https://sol-wallet.ankit.club/",
+    techStack: [
+      "nextjs.svg",
+      "reactJS.svg",
+      "typescript.svg",
+      "tailwindcss.svg",
+      "shadcn.svg",
+    ],
+  },
+  {
+    name: "GitHub Analyzer",
+    active: true,
+    description:
+      "An LLM-powered web application that deeply analyzes any public GitHub repository. It helps developers and newcomers understand project structure, tech stack, and code insights using AI-generated summaries.",
+    githubLink: "https://github.com/Ankit-xyz1/githubanalyzer",
+    LiveLink: "https://git-analyzer.ankit.club/",
     techStack: [
       "nextjs.svg",
       "reactJS.svg",
