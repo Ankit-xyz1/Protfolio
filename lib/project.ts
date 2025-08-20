@@ -22,7 +22,7 @@ export const projectArray: projectstype[] = [
     ],
   },
   {
-    name: "Uptimed (a mini version control system)",
+    name: "Uptimed.soon",
     active: false,
     description:
       "coming soon",
