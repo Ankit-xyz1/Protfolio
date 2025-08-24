@@ -31,11 +31,11 @@ const Projects = () => {
             {projectList.map((item: projectstype, index: number) => (
                 <motion.div key={index} className="min-h-[20vh] max-h-fit w-full rounded-xl flex flex-col text-yellow-50  bg-zinc-950 border-2 border-zinc-900  p-1">
                     <div className="heading  w-full h-fit p-2 flex justify-between">
-                        <p className="text-xl md:text-2xl jet text-white">
+                        <span className="text-xl md:text-2xl jet text-white">
                             <LinkPreview url={item.LiveLink} className="text-white" >
                                 {item.name}
                             </LinkPreview>
-                        </p>
+                        </span>
                         <div className={`${item.active ? 'bg-green-500 ' : 'bg-red-500 '}animate-pulse w-[7px] h-[7px] rounded-2xl`}></div>
                     </div>
                     <div className="description  w-full h-fit p-2">

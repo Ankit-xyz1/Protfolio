@@ -1,11 +1,16 @@
+
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   TypewriterEffect,
   TypewriterEffectSmooth,
 } from "./ui/typewriter-effect";
 import { experience } from "@/lib/project";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import ExpCard from "./ExpCard";
+import { span } from "framer-motion/client";
+
 
 const Home = () => {
   return (
@@ -22,7 +27,7 @@ const Home = () => {
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <div className="tagLine text-lg md:text-2xl jet text-zinc-300">
+      <div className="tagLine text-lg md:text-xl jet text-zinc-300">
         <span className="font-semibold text-zinc-100">I’m Ankit</span> — a
         <span className="font-semibold text-zinc-100"> Software Dev</span>{" "}
         from Mumbai building complete applications from frontend to backend.
@@ -40,28 +45,23 @@ const Home = () => {
       </div>
       <div className="para text-sm md:text-xl mt-5">
         <div className="heading jet mb-5 text-white">Experience-</div>
-        <div className="min-h-[10vh] h-fit bg-zinc-900 border-2 border-zinc-800 rounded p-4 flex items-center text-white jet overflow-x-auto space-x-6">
-          {experience.map((item, index) => (
-            <div
-              key={index}
-              className="min-w-max px-4 py-2 border border-zinc-800 rounded-lg bg-zinc-800 shadow-md"
-            >
-              <h3 className="text-lg font-semibold">{item.name}</h3>
-              <p className="text-sm text-zinc-300">{item.role}</p>
-              <p className="text-xs text-zinc-400">
-                {item.startDate} - {item.endDate} ({item.Durration})
-              </p>
-              <a
-                href={`https://${item.link}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-blue-400 hover:underline"
-              >
-                {item.link}
-              </a>
-            </div>
-          ))}
+        <div className="min-h-[10vh] h-fit bg-zinc-900 border-2 border-zinc-800 rounded p-4 flex flex-col gap-6 text-white jet">
+          <div className="relative flex flex-col items-center">
+            {[...experience].reverse().map((item, index) => (
+              <div key={index} className="flex flex-col items-start w-full">
+                {/* Card */}
+                <ExpCard item={item} />
+
+                {/* Connector line (skip after last item) */}
+                {index !== experience.length - 1 && (
+                  <div className="w-[2px] h-6 bg-zinc-700 my-2 ml-12" />
+                )}
+              </div>
+            ))}
+          </div>
+
         </div>
+
       </div>
       <div className="para text-sm md:text-xl mt-5 flex gap-2 flex-col">
         <div className="heading jet mb-5 text-white">Skills</div>
@@ -102,9 +102,9 @@ const Home = () => {
                 { alt: "Solana", src: "sol.svg" },
                 { alt: "Ethereum", src: "eth.svg" },
               ].map((item, index) => (
-                <div className="flex flex-col">
+                <div className="flex flex-col" key={index}>
                   <motion.div
-                    key={index}
+
                     className="flex flex-col items-center justify-center w-[80px] p-1 rounded-lg shadow-md hover:shadow-lg cursor-pointer transition-all"
                   >
                     <motion.img

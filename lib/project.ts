@@ -1,3 +1,4 @@
+
 interface projectstype {
   name: string;
   active: boolean;
@@ -106,11 +107,37 @@ export const projectArray: projectstype[] = [
 
 export const experience = [
   {
-    name: "protega Ai",
-    role: "Backend Developer intern",
-    Durration: "3 months",
+    name: "Protega AI",
+    role: "Backend Developer Intern",
+    duration: "3 months",
     startDate: "29/04/2025",
     endDate: "29/07/2025",
-    link: "www.protega.ai",
+    link: "https://www.protega.ai",
+    description: [
+      "Built the backend architecture from scratch using Express.js, TypeScript, and PostgreSQL.",
+      "Developed and deployed a custom LLM-powered engine for intelligent insurance claim authentication and fraud detection.",
+      "Integrated with Shopify APIs to handle webhooks, order tracking, and product-plan associations.",
+      "Connected and managed third-party APIs, including LLMs and insurer systems, for real-time claim validation and policy issuance.",
+      "Wrote comprehensive backend documentation covering API usage, route behavior, and deployment procedures.",
+      "Designed scalable, secure, and fault-tolerant services with production-grade error handling and logging.",
+      "Led implementation of features like customer onboarding, policy automation, and order protection verification.",
+      "Collaborated closely with cross-functional teams and contributed to the overall system architecture and decision-making."
+    ],
+  },
+  {
+    name: "Protega AI",
+    role: "Backend Developer",
+    type: "Full-time", // you can also use "Full-time" if needed
+    startDate: "01/08/2025",
+    endDate: "Present",
+    link: "https://www.protega.ai",
+    mode: "Hybrid",
+    description: [
+      "Extended responsibilities beyond internship to a full-time backend developer role.",
+      "Maintaining and scaling core backend services developed during internship.",
+      "Optimizing LLM-powered fraud detection pipelines and integrating additional insurer APIs.",
+      "Contributing to long-term architecture decisions and production deployments."
+    ],
   },
 ];
+
